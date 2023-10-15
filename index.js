@@ -7,8 +7,9 @@ fetch(baseURL)
  displayContent(data)
 })
 
-function displayContent(data){
-    for(var i =0; i<data.length; i++)
-    (document.getElementById("data").innerHTML += data[i].id + data[i].name
+function displayContent(data) {
+    for (i =0; i<data.length; i++)
+    (document.getElementById("data").innerText += data[i].id + data[i].name
     )
      console.log(data)}
+
