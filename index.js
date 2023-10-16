@@ -8,8 +8,20 @@ fetch(baseURL)
 })
 
 function displayContent(data) {
-    for (i =0; i<data.length; i++)
-    (document.getElementById("data").innerText += data[i].id + data[i].name
-    )
-     console.log(data)}
+    for (let i of data){
+    console.log(i)
+    let list = document.getElementById("data");
+    let li = document.createElement('li');
+    li.textContent = i.name;
+    list.appendChild(li);
+    
+    }
+    console.log(data)}
 
+    // let li = document.createElement('li');
+    // li.textContent = [i];
+    // list.appendChild(li);
+    // li.addEventListener('click', (e)=>{
+    //     li.classList.toggle('active')})
+    
+//document.getElementById("data").innerText += data[i].id + data[i].name 
