@@ -14,14 +14,13 @@ function displayContent(data) {
     let li = document.createElement('li');
     li.textContent = i.name;
     list.appendChild(li);
-    
-    }
-    console.log(data)}
+const voteCounter = document.getElementsByTagName('li')
+let voteCount = 0;
+li.addEventListener('click', ()=> {
+    voteCount = voteCount + 1;
+})
 
-    // let li = document.createElement('li');
-    // li.textContent = [i];
-    // list.appendChild(li);
-    // li.addEventListener('click', (e)=>{
-    //     li.classList.toggle('active')})
-    
-//document.getElementById("data").innerText += data[i].id + data[i].name 
+    }
+   }
+
+
