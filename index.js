@@ -1,4 +1,6 @@
 
+//fetch requests data from the json live server.
+//.then assists in getting a response from json.
 const baseURL = 'http://localhost:3000/characters'
 
 fetch(baseURL)
@@ -17,10 +19,9 @@ function displayContent(data) {
 const voteCounter = document.getElementsByTagName('li')
 let voteCount = 0;
 li.addEventListener('click', ()=> {
-    voteCount = voteCount + 1;
+    voteCount = voteCount++;
 })
 
     }
    }
-
-
+  
