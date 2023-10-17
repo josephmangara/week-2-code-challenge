@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function getCharacters(){
-fetch("http://localhost:3000/characters")
+fetch("https://my-json-server.typicode.com/josephmangara/week-2-code-challenge/characters")
 .then(res => res.json())
 .then(data => {
  displayContent(data)
@@ -23,11 +23,13 @@ function displayContent(data) {
     list.appendChild(li);
 }}
 function displayAnimalDetails(character){
+    const animalDetails = document.getElementById('animalDetails');
     animalDetails.innerHTML = `
     <h2 id="data">${character.name}</h2>
-    <img src="${character.image}">
-    <p>Votes: ${Character.votes}</p>
+    <img src="${character.image}" alt="${character.name} Image">
+    <p>Votes: ${character.votes}</p>
     <button onclick="vote(${character.id})">vote<button>
     <button onclick="resetvote(${character.id})">reset votes</button>
     `;
 }
+
