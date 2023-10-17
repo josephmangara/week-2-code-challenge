@@ -4,18 +4,17 @@
 let characters = []
 document.addEventListener("DOMContentLoaded", function(){
     getCharacters()
-})
+});
 
 function getCharacters(){
 fetch("https://my-json-server.typicode.com/josephmangara/week-2-code-challenge/characters")
 .then(res => res.json())
 .then(data => {
  displayContent(data)
-})}
+})};
 
 function displayContent(data) {
     for (let character of data){
-    console.log(character)
     let list = document.getElementById("data");
     let li = document.createElement('li');
     li.textContent = character.name;
@@ -28,8 +27,16 @@ function displayAnimalDetails(character){
     <h2 id="data">${character.name}</h2>
     <img src="${character.image}" alt="${character.name} Image">
     <p>Votes: ${character.votes}</p>
-    <button onclick="vote(${character.id})">vote<button>
-    <button onclick="resetvote(${character.id})">reset votes</button>
     `;
 }
 
+function displayVotes() {
+    const numberInput = document.getElementById('container').value;
+    const displayResult = document.getElementById('displayResult');
+
+    if (!isNaN(numberInput) && numberInput !== '') {
+        displayResult.textContent = `Votes: ${numberInput}`;
+    } else {
+        displayResult.textContent = 'Please enter a valid number.';
+    }
+}
