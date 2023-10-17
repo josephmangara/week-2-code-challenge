@@ -14,32 +14,20 @@ fetch("http://localhost:3000/characters")
 })}
 
 function displayContent(data) {
-    for (let i of data){
-    console.log(i)
+    for (let character of data){
+    console.log(character)
     let list = document.getElementById("data");
     let li = document.createElement('li');
-    li.textContent = i.name;
+    li.textContent = character.name;
+    li.addEventListener('click', () => displayAnimalDetails(character));
     list.appendChild(li);
 }}
-// function displayCharacterDetails(characters){
-//     document.getElementsId('data')
-//     console.log(data)
-//     document.addEventListener('click', )
-//      alert('it\'s working')
-// }
-
-const button = document.getElementsById('button').addEventListener
-    ('submit',(event) => alert("vote counted"));
-    console.log(button)
-// function addingEventListener() {
-//     const button = document.getElementById('button');
-//     button.addEventListener('click', function() {
-//       alert('I was clicked!');
-//     });
-//     }
-
-
-const voteCounter = document.querySelector('data')
-li.addEventListener('click', ()=> {
-    document.querySelector('#image')
-    image.src = object.image})
+function displayAnimalDetails(character){
+    animalDetails.innerHTML = `
+    <h2>${character.name}</h2>
+    <img src='${character.image}
+    <p>Votes: ${Character.votes}</p>
+    <button onclick="vote(${character.id})">vote<?button>
+    <button onclick="resetvote(${character.id})">vote</button>
+    `;
+}
