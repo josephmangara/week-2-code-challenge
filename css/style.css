@@ -1,1 +1,6 @@
 body {background-color: rgb(147, 238, 238);}
+span {
+    background-color: rgb(250, 247, 247);
+    word-spacing: 20px;
+}
+
