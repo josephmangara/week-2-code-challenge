@@ -24,10 +24,10 @@ function displayContent(data) {
 }}
 function displayAnimalDetails(character){
     animalDetails.innerHTML = `
-    <h2>${character.name}</h2>
-    <img src='${character.image}
+    <h2 id="data">${character.name}</h2>
+    <img src="${character.image}">
     <p>Votes: ${Character.votes}</p>
-    <button onclick="vote(${character.id})">vote<?button>
-    <button onclick="resetvote(${character.id})">vote</button>
+    <button onclick="vote(${character.id})">vote<button>
+    <button onclick="resetvote(${character.id})">reset votes</button>
     `;
 }

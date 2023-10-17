@@ -8,14 +8,13 @@
 </head>
 <body>
     <h1>Animal votes</h1>
-    <h2 id="data"></h2>
-    <img id="image"
-         src="url"
-    />
-    <div id="animalDetails">
-        <input>
-        <button id="button">vote</button>
-        <button id="resetbutton">reset votes</button>
+    <div id="animalDetails"></div>
+        <h2 id="data"></h2>
+        <img src="url">
+        <p>Votes</p>
+        <input type="number" placeholder="votes">
+        <button onclick="addvote()">vote</button>
+        <button onclick="resetvote()">reset votes</button>
     </div>
     <script src="index.js"></script>
 </body>
